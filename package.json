@@ -1,0 +1,42 @@
+{
+  "name": "sneakerbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node ./app.js",
+    "lint": "eslint .",
+    "lint-fix": "eslint --fix .",
+    "knex": "knex"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samc621/SneakerBot.git"
+  },
+  "author": "Samuel Corso",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samc621/SneakerBot/issues"
+  },
+  "homepage": "https://github.com/samc621/SneakerBot#readme",
+  "dependencies": {
+    "dotenv-flow": "^3.2.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "express": "^4.17.1",
+    "express-validation": "^3.0.6",
+    "joi": "^17.3.0",
+    "knex": "^0.21.15",
+    "nodemailer": "^6.4.17",
+    "pg": "^8.5.1",
+    "puppeteer": "^5.5.0",
+    "puppeteer-cluster": "^0.22.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.6",
+    "puppeteer-page-proxy": "^1.2.8",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "winston": "^3.3.3"
+  }
+}
