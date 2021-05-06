@@ -1,42 +1,33 @@
-require('dotenv-flow').config();
-
 module.exports = {
-  local: {
+ development: {
     client: 'pg',
     connection: {
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      user: process.env.DB_USERNAME,
-      database: process.env.DB_NAME,
-      password: process.env.DB_PASSWORD
+      host : '127.0.0.1',
+      user : '[db_username]',
+      password : '[db_password]',
+      database : 'nike',
+      charset: 'utf8'
     },
-    useNullAsDefault: true,
-    debug: true,
     migrations: {
-      directory: 'db/migrations',
-      tableName: 'knex_migrations'
+      directory: __dirname + '/db/migrations',
     },
     seeds: {
-      directory: 'db/seeds'
+      directory: __dirname + '/db/seeds'
     }
   },
-  docker: {
-    client: 'pg',
+  production: {
+    client: 'postgresql',
     connection: {
-      host: process.env.DB_HOST,
-      port: process.env.DB_PORT,
-      user: process.env.DB_USERNAME,
-      database: process.env.DB_NAME,
-      password: process.env.DB_PASSWORD
+      database: 'my_db',
+      user:     'username',
+      password: 'password'
     },
-    useNullAsDefault: true,
-    debug: false,
+    pool: {
+      min: 2,
+      max: 10
+    },
     migrations: {
-      directory: 'db/migrations',
       tableName: 'knex_migrations'
-    },
-    seeds: {
-      directory: 'db/seeds'
     }
   }
 };
